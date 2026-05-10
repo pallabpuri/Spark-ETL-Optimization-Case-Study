@@ -26,3 +26,8 @@ result = optimized_join.groupBy("customer_id").sum("amount")
 result.show()
 
 spark.stop()
+
+
+
+# Broadcast join reduces shuffle operations
+# Useful when joining large dataset with small dimension table
